@@ -12,7 +12,7 @@ Financial concepts become easier to reason about when learners connect formulas 
 
 ### Interactive website
 
-Open `index.html` through a local web server or publish the repository with GitHub Pages.
+Live demo: https://manbhavsingh.github.io/money-matters-financial-literacy/ (available after the GitHub Pages deployment workflow succeeds). You can also run `index.html` through a local web server.
 
 ### Learning materials
 
