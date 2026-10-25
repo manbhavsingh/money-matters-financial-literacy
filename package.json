@@ -1,0 +1,11 @@
+{
+  "name": "money-matters-financial-literacy-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An interactive financial-literacy learning kit for Indian students with calculators, lesson plans, and formative assessment.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}
