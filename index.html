@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive financial-literacy learning kit for Indian students: budgeting, saving, inflation, borrowing, and scam awareness.">
+  <meta name="theme-color" content="#122b29">
+  <title>Money Matters — Financial Literacy Learning Kit</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Money Matters home"><span class="mark">₹</span><span>money<span class="light">matters</span><small>FINANCIAL LITERACY LAB</small></span></a>
+    <nav aria-label="Main navigation"><a href="#learn">Learn</a><a href="#tools">Tools</a><a href="#quiz">Knowledge check</a><a href="#sources">Sources</a></nav>
+    <a class="header-link" href="#learn">Start learning ↗</a>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A practical learning kit for students</p>
+        <h1>Make money<br><em>make sense.</em></h1>
+        <p class="lead">Understand everyday money decisions with plain-language lessons, worked examples, interactive calculators, and short challenges. No finance background needed.</p>
+        <div class="actions"><a class="button primary" href="#learn">Explore lessons ↓</a><a class="link" href="#tools">Try a calculator ↗</a></div>
+        <p class="note">✓ Designed for learning, not investment advice</p>
+      </div>
+      <div class="hero-art" aria-label="Decorative illustration of a savings jar and coins">
+        <div class="orbit"></div><div class="orbit orbit2"></div>
+        <div class="note-card"><small>YOUR MONEY PLAN</small><strong>Small steps.<br>Clear choices.</strong><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="coin c1">₹</div><div class="coin c2">₹</div><div class="coin c3">₹</div>
+        <div class="jar"><div class="jar-lid"></div><div class="jar-slot"></div><span>⌣</span></div>
+        <div class="chart"><small>CONSISTENCY</small><svg viewBox="0 0 180 55" aria-label="Illustrative rising line" role="img"><path d="M4 47 C30 40 33 27 54 34 S82 41 98 24 S133 28 150 12 S169 14 176 4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="176" cy="4" r="4" fill="currentColor"/></svg><small>Habits matter more than hacks.</small></div>
+      </div>
+      <div class="hero-foot"><span>01 / LEARN THE BASICS</span><span>02 / TRY THE NUMBERS</span><span>03 / CHECK YOUR UNDERSTANDING</span></div>
+    </section>
+
+    <section class="wrap section" id="learn">
+      <div class="section-head"><div><p class="eyebrow">THE LEARNING PATH</p><h2>Start with the everyday.<br><em>Build confidence from there.</em></h2></div><p>Five short modules turn familiar situations into useful financial concepts. Move at your own pace.</p></div>
+      <div class="lessons">
+        <article class="lesson featured"><span class="number">01</span><small>FOUNDATIONS · 10 MIN</small><h3>Needs, wants &amp; a budget</h3><p>Give every rupee a purpose. Plan spending without treating every want as a mistake.</p><a href="content/lesson-plans.md">Open lesson outline ↗</a></article>
+        <article class="lesson"><span class="number">02</span><small>SAVING · 12 MIN</small><h3>Simple and compound interest</h3><p>See how time, rate, and contributions change the way savings can grow.</p><a href="#tools">Try savings calculator ↗</a></article>
+        <article class="lesson"><span class="number">03</span><small>THE ECONOMY · 10 MIN</small><h3>Inflation &amp; purchasing power</h3><p>Explore why the same amount of money may buy less over time.</p><a href="#tools">Explore inflation ↗</a></article>
+        <article class="lesson"><span class="number">04</span><small>BORROWING · 12 MIN</small><h3>Loans, EMIs &amp; total cost</h3><p>Understand why a monthly payment is only part of a loan's cost.</p><a href="#tools">Try EMI calculator ↗</a></article>
+        <article class="lesson"><span class="number">05</span><small>GOOD DECISIONS · 8 MIN</small><h3>Risk, scams &amp; smart choices</h3><p>Learn to pause, verify claims, and never share credentials or OTPs.</p><a href="content/worksheet.md">Open activity sheet ↗</a></article>
+      </div>
+      <div class="callout"><strong>Designed for classrooms.</strong> Every module includes learning objectives, a worked example, a discussion prompt, and a quick check. <a href="content/lesson-plans.md">Read all lesson plans →</a></div>
+    </section>
+
+    <section class="tools" id="tools"><div class="wrap">
+      <div class="section-head"><div><p class="eyebrow inverse">THE INTERACTIVE LAB</p><h2>Try the numbers.<br><em>Understand the trade-offs.</em></h2></div><p>Change the inputs and see how the result changes. All figures are illustrative learning examples.</p></div>
+      <div class="toolbox">
+        <div class="tabs" role="tablist" aria-label="Financial calculators">
+          <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="budget">01 <span>Budget</span></button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="savings">02 <span>Savings</span></button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="inflation">03 <span>Inflation</span></button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="loan">04 <span>Loan EMI</span></button>
+        </div>
+        <section class="panel active" id="panel-budget" role="tabpanel">
+          <div class="tool-description"><small>PLAN YOUR MONTH</small><h3>A budget is a plan, not a punishment.</h3><p>List the money available, expected costs, and planned saving. Your categories can differ from these examples.</p><span class="formula">Money left = income − expenses</span></div>
+          <form id="budget-form" class="form">
+            <label>Monthly money available <span class="input"><b>₹</b><input id="budget-income" type="number" min="0" max="10000000" step="100" value="5000" required></span></label>
+            <label>Needs (travel, meals, essentials) <span class="input"><b>₹</b><input id="budget-needs" type="number" min="0" max="10000000" step="100" value="2600" required></span></label>
+            <label>Wants (outings, subscriptions) <span class="input"><b>₹</b><input id="budget-wants" type="number" min="0" max="10000000" step="100" value="1200" required></span></label>
+            <label>Planned saving <span class="input"><b>₹</b><input id="budget-saving" type="number" min="0" max="10000000" step="100" value="700" required></span></label>
+            <button class="button dark" type="submit">Calculate budget →</button>
+          </form>
+          <div class="result" aria-live="polite"><small>UNALLOCATED MONEY</small><strong id="budget-result">₹500</strong><p id="budget-message">You have ₹500 not yet assigned a job.</p><div class="budgetbar"><span id="budget-bar-needs"></span><span id="budget-bar-wants"></span><span id="budget-bar-saving"></span><span id="budget-bar-left"></span></div><small class="muted">Needs · Wants · Saving · Unallocated</small></div>
+        </section>
+        <section class="panel" id="panel-savings" role="tabpanel" hidden>
+          <div class="tool-description"><small>SMALL STEPS OVER TIME</small><h3>Consistency adds up.</h3><p>Estimate how an initial deposit and monthly contributions might grow under an assumed annual rate.</p><span class="formula">Future value depends on rate, time &amp; deposits</span></div>
+          <form id="savings-form" class="form">
+            <label>Starting amount <span class="input"><b>₹</b><input id="savings-initial" type="number" min="0" max="100000000" value="5000" required></span></label>
+            <label>Monthly contribution <span class="input"><b>₹</b><input id="savings-monthly" type="number" min="0" max="10000000" value="1000" required></span></label>
+            <label>Assumed annual rate (%) <span class="input"><input id="savings-rate" type="number" min="0" max="100" step="0.1" value="6" required><b>%</b></span></label>
+            <label>Duration <span class="input"><input id="savings-years" type="number" min="1" max="100" value="5" required><b>years</b></span></label>
+            <button class="button dark" type="submit">Estimate growth →</button>
+          </form>
+          <div class="result" aria-live="polite"><small>ILLUSTRATIVE FUTURE VALUE</small><strong id="savings-result">₹81,000</strong><div class="stats"><span>Contributed <b id="savings-contributions">₹65,000</b></span><span>Estimated growth <b id="savings-growth">₹16,000</b></span></div><p id="savings-message">A model based on monthly compounding and month-end contributions.</p></div>
+        </section>
+        <section class="panel" id="panel-inflation" role="tabpanel" hidden>
+          <div class="tool-description"><small>THE PRICE OF TOMORROW</small><h3>Inflation changes purchasing power.</h3><p>Try a hypothetical constant rate to see how the price of an item could change over time.</p><span class="formula">Future price = today's price × (1 + rate)<sup>years</sup></span></div>
+          <form id="inflation-form" class="form">
+            <label>Today's price <span class="input"><b>₹</b><input id="inflation-price" type="number" min="0" max="100000000" value="100" required></span></label>
+            <label>Assumed annual rate (%) <span class="input"><input id="inflation-rate" type="number" min="0" max="100" step="0.1" value="5" required><b>%</b></span></label>
+            <label>Duration <span class="input"><input id="inflation-years" type="number" min="1" max="100" value="5" required><b>years</b></span></label>
+            <button class="button dark" type="submit">Explore price changes →</button>
+          </form>
+          <div class="result" aria-live="polite"><small>HYPOTHETICAL FUTURE PRICE</small><strong id="inflation-result">₹127.63</strong><div class="stats"><span>Price increase <b id="inflation-increase">₹27.63</b></span><span>Buying power of ₹100 <b id="inflation-power">₹78.35</b></span></div><p id="inflation-message">A simplified scenario with the same rate each year.</p></div>
+        </section>
+        <section class="panel" id="panel-loan" role="tabpanel" hidden>
+          <div class="tool-description"><small>BORROWING HAS A TOTAL COST</small><h3>Look beyond the monthly EMI.</h3><p>Estimate a fixed-rate monthly payment. Real loans can include fees, insurance, changing rates, or other conditions.</p><span class="formula">EMI uses principal, monthly rate &amp; number of payments</span></div>
+          <form id="loan-form" class="form">
+            <label>Loan principal <span class="input"><b>₹</b><input id="loan-principal" type="number" min="1" max="1000000000" step="1000" value="100000" required></span></label>
+            <label>Annual interest rate (%) <span class="input"><input id="loan-rate" type="number" min="0" max="100" step="0.1" value="10" required><b>%</b></span></label>
+            <label>Loan term <span class="input"><input id="loan-years" type="number" min="1" max="40" value="3" required><b>years</b></span></label>
+            <button class="button dark" type="submit">Calculate EMI →</button>
+          </form>
+          <div class="result" aria-live="polite"><small>ESTIMATED MONTHLY EMI</small><strong id="loan-result">₹3,227</strong><div class="stats"><span>Total paid <b id="loan-total">₹1,16,172</b></span><span>Total interest <b id="loan-interest">₹16,172</b></span></div><p id="loan-message">Compare the monthly payment and total repayment, not only the EMI.</p></div>
+        </section>
+      </div>
+      <p class="disclaimer">ⓘ These calculators use simplified assumptions for education. They do not recommend financial products or predict actual returns.</p>
+    </div></section>
+
+    <section class="wrap section quiz-section" id="quiz">
+      <div><p class="eyebrow">PUT IT INTO PRACTICE</p><h2>Good decisions start<br>with <em>good questions.</em></h2><p>Try five quick questions. Read each explanation; understanding why matters more than the score.</p><p class="callout">The quiz is a learning aid, not a validated financial-literacy assessment.</p></div>
+      <div class="quiz-card"><div class="quiz-head"><span>KNOWLEDGE CHECK</span><span id="quiz-progress">QUESTION 1 OF 5</span></div><div class="progress"><span id="quiz-track"></span></div>
+        <form id="quiz-form">
+          <fieldset class="question" data-q="0"><legend>You receive ₹2,000 for the month. What is a useful first step?</legend><label><input type="radio" name="q0" value="a">Spend on what you want and check later.</label><label><input type="radio" name="q0" value="b">List essentials, savings goals, and flexible spending.</label><label><input type="radio" name="q0" value="c">Assume you should save all of it.</label></fieldset>
+          <fieldset class="question" data-q="1" hidden><legend>If a ₹100 item rises by 5%, what is its new price?</legend><label><input type="radio" name="q1" value="a">₹95</label><label><input type="radio" name="q1" value="b">₹105</label><label><input type="radio" name="q1" value="c">₹150</label></fieldset>
+          <fieldset class="question" data-q="2" hidden><legend>What makes compound interest different from simple interest?</legend><label><input type="radio" name="q2" value="a">It can earn interest on previously earned interest.</label><label><input type="radio" name="q2" value="b">It guarantees a higher return for every product.</label><label><input type="radio" name="q2" value="c">It means money cannot lose value.</label></fieldset>
+          <fieldset class="question" data-q="3" hidden><legend>A loan ad shows a low EMI. What else should you check?</legend><label><input type="radio" name="q3" value="a">Only the design of the advertisement.</label><label><input type="radio" name="q3" value="b">Total repayment, rate, fees, and loan term.</label><label><input type="radio" name="q3" value="c">Whether a friend has seen the same ad.</label></fieldset>
+          <fieldset class="question" data-q="4" hidden><legend>Someone promises to double your money quickly with no risk. What's safest?</legend><label><input type="radio" name="q4" value="a">Send a small amount to test it.</label><label><input type="radio" name="q4" value="b">Share your bank OTP to verify the offer.</label><label><input type="radio" name="q4" value="c">Pause, verify independently, and never share credentials or OTPs.</label></fieldset>
+          <div class="quiz-actions"><button class="button primary" id="quiz-check" type="button">Check answer</button><button class="button outline" id="quiz-next" type="button" disabled>Next question →</button><button class="text-button" id="quiz-restart" type="button" hidden>Try again</button></div>
+          <p id="quiz-feedback" aria-live="polite">Choose one answer to continue.</p>
+        </form><div id="quiz-summary" hidden><strong id="quiz-score"></strong><h3>Knowledge grows with practice.</h3><p id="quiz-summary-text"></p><button class="button primary" id="quiz-summary-restart" type="button">Retake quiz ↻</button></div>
+      </div>
+    </section>
+    <section class="sources" id="sources"><div class="wrap sources-grid"><div><p class="eyebrow inverse">BUILT ON RELIABLE FOUNDATIONS</p><h2>Learn from sources<br><em>you can check.</em></h2><p>Public financial-education resources inform the concepts; examples and activities are independently written.</p></div><div class="source-list">
+      <a href="https://www.rbi.org.in/commonman/English/content/01SCHOOL20042018.pdf" target="_blank" rel="noopener noreferrer"><small>RBI / 01</small><span><b>Financial Literacy for School Children</b><br><small>Budgeting, saving, and borrowing</small></span>↗</a>
+      <a href="https://www.rbi.org.in/commonman/images/FAME%20Booklet%20second%20edition/FAME%20Booklet%20English/FAME30072020.pdf" target="_blank" rel="noopener noreferrer"><small>RBI / 02</small><span><b>Financial Awareness Messages (FAME)</b><br><small>Inflation, interest, and money practices</small></span>↗</a>
+      <a href="https://www.rbi.org.in/commonman/Upload/English/Content/PDFs/English_16042021.pdf" target="_blank" rel="noopener noreferrer"><small>RBI / 03</small><span><b>National Strategy for Financial Education 2020–2025</b><br><small>Financial knowledge, behaviour, and attitude</small></span>↗</a>
+      <a href="content/research-notes.md"><small>PROJECT NOTES</small><span><b>Design rationale and limitations</b><br><small>Method, assumptions, and future evaluation</small></span>↗</a>
+    </div></div></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#top"><span class="mark">₹</span><span>money<span class="light">matters</span><small>FINANCIAL LITERACY LAB</small></span></a><p>Independent educational project by Manbhav Singh · 2026</p><p>For educational purposes only; not financial, legal, tax, or investment advice.</p></footer>
+</body>
+</html>
